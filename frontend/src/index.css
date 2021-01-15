@@ -1,0 +1,26 @@
+h2{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Amaranth,sans-serif;
+  margin-top: 12%;
+}
+.footer{
+  grid-area: footer;
+  background-color: cornflowerblue;
+  font-family: Amaranth,sans-serif;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+.text-center{
+  font-family: Amaranth,sans-serif;
+}
+.submit{
+  margin-top: 3%;
+}
+
