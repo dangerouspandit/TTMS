@@ -7,16 +7,10 @@ import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 function Dashboard() {
     return (
-        <div className="dashboard">
-            <Navbar className="head">
-                <div className="container">
-                    <NavbarBrand href="/">Time Tracking Management System</NavbarBrand>
-                </div>
-            </Navbar>
+        <div>
             <SideNav
                 onSelect={(selected) => {
-                }}
-            >
+                }}>
                 <SideNav.Toggle />
                 <SideNav.Nav defaultSelected="home">
                     <NavItem eventKey="home">
