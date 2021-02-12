@@ -1,17 +1,16 @@
-const{ createPool } = require ('mysql');
-const pool = createPool({
-    host: "@localhost",
-    user: "TTMS_DEVAPP",
-    password: "DEVAPP",
-    database: "CSD_TTMS",
-    connectionLimit: 100
-})
+var express = require('express');
+var mysql = require('mysql');
 
-pool.query('select * from csm_ad_resource', (err, result, fields) =>{
-    if(err){
-        return console.log(err);
-    }
-    return console.log(result);
-})
+var con = mysql.createConnection({
+  connectionlimit : 100,
+  host     : '192.168.1.100',
+  port     :  3306,
+  user     : 'ttms_devapp',
+  password : 'devapp',
+  database : 'csd_ttms'
 
-
+}); 
+    con.connect(function(err) {
+      if (err) throw err;
+      console.log("Connected!");
+    });

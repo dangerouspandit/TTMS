@@ -5,7 +5,7 @@ var router = express.Router();
 var users=[
   {
     email: 'skdwivediiitn@gmail.com', password:'sam@123',
-    userid: 'A1001@gmail.com', password:'123'
+    userid: 'A1001', password:'123'
   }
 ]
 /* GET home page. */
@@ -16,6 +16,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/login', function(req, res){
   let result = users.find(user => user.email == req.body.email);
+  let result = users.find(user => user.userid == req.body.userid);
             
   if(result){
     if(result.password == req.body.password){
